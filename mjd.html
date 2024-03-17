@@ -3,9 +3,23 @@
 <head>
 </head>
 <body>
-    This is a simple HTML page that I will insert React code into
-
+    1) This is a simple HTML page that I will insert React code into:
+    <br>
+    <br>
+    <!-- Placeholder for our simple React content -->
     <div id="dynamicContentContainer"></div>
+    <br>
+    2) Here is some JSX as well:
+    <br>
+    <br>
+    <!-- Placeholder for our JSX -->
+    <div id="dynamicSyntacticContainer"></div>
+    <br>
+    3) And here is plain JavaScript which does not use React:
+    <br>
+    <br>
+    <!-- Placeholder for our plain JS -->
+    <button id="myButton">Plain JS Button</button>
 
     <!-- Load React. -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
@@ -13,6 +27,21 @@
 
     <!-- Load our React component. -->
     <script src="dynamicContent.js"></script>
+
+    <!-- Prep JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Not putting the JSX in a separate file so that I can skip spinning up a server with Node.js -->
+    <!-- See https://stackoverflow.com/questions/62109175/why-jsx-code-in-external-js-fie-doesnt-work-with-babel-cdn -->
+    <script type="text/babel">
+        const ExampleJSX = () => {
+            return (<div>hello world</div>)
+        }
+        const root2 = ReactDOM.createRoot(document.getElementById('dynamicSyntacticContainer'));
+        root2.render(<ExampleJSX />)
+    </script>
+
+    <!-- Load plain JS -->
+    <script src="plainJavaScript.js"></script>
 
 </body>
 </html>
