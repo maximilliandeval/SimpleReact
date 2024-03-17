@@ -5,6 +5,8 @@ This is a simple demonstration of 3 different ways in which web page modules can
 2. JSX with React
 3. Pure JavaScript
 
+To test, all you have to do is open `simple.html` with your preferred web browser; you do not need to download anything.  
+
 
 References:
 * https://legacy.reactjs.org/docs/add-react-to-a-website.html
