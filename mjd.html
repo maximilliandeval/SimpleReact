@@ -20,6 +20,16 @@
     <br>
     <!-- Placeholder for our plain JS -->
     <div id="myButton"></div>
+    <br>
+    4) Here is some Preact:
+    <br>
+    <br>
+    <!-- Placeholder for our plain JS -->
+    <div id="preactHolder"></div>
+    <br>
+    THE END
+
+
 
     <!-- Load React. -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
@@ -42,6 +52,19 @@
 
     <!-- Load plain JS -->
     <script src="plainJavaScript.js"></script>
+
+    <!-- Load Preact type="module" -->
+    <script type="module">
+        import { h, Component, render } from 'https://unpkg.com/preact?module';
+  
+        // Create your app
+        const examplePreact = h('h6', null, 'Hello World from Planet Preact!');
+  
+        render(examplePreact, document.getElementById('preactHolder'));
+    </script>
+    <!-- Similarly to JSX, not putting in a separate file -->
+    <!-- See https://stackoverflow.com/questions/76869265/import-preact-hooks-module-locally-offline -->
+
 
 </body>
 </html>
